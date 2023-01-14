@@ -12,6 +12,9 @@ echo "--------------------------"
 printf "${clear}"
 
 echo -e "\e[3m(Use ^C only once to terminate the bash.)\e[0m"
+echo "Make sure you have added the both lines in bashrc:"
+echo "export ROS_IPV6=on"
+echo "export ROS_MASTER_URI=http://master:11311"
 
 trap ctrl-c
 trap ctrl_c INT
@@ -28,6 +31,9 @@ echo "--------------------------"
 echo "      BYE $hostnameval    "
 echo "--------------------------"
 printf "${clear}"
+echo "Make sure you have commented the both lines in bashrc (to use ROS in simulation):"
+echo "export ROS_IPV6=on"
+echo "export ROS_MASTER_URI=http://master:11311"
 kill $$ 
 }
 
