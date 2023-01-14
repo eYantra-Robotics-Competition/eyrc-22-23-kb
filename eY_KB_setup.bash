@@ -64,6 +64,7 @@ echo "Your hostname: $hostnameval"
 #Join husarnet command
 husarnet join $join_code team-$team_id-$machine
 wait
+sleep 2
 
 # If option is 2 setup camera feed on default browser
 if [ "$machine" -eq "2" ]
